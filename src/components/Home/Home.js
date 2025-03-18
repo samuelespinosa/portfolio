@@ -1,34 +1,29 @@
-import React from "react";
-import homeLogo from "../../Assets/home-main2.png";
+import React, { useEffect } from "react";
+//import homeLogo from "../../Assets/home-main2.png";
 import Particle from "../Particle";
 import logoReact from "../../Assets/icons8-react-400.png";
 import {AiFillGithub} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Board from "../GameOfLife/Board";
 
 
-function Home() {
+function Home({navHeight}) {
+
   return (
-    <section id="home" className="flex flex-column bg-gray-900">
-      <div className="bg-white">
-        <div className="container mx-auto mx-4 my-5">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="flex justify-center items-end">
-                <h1 className="heading text-4xl">
-                  HI! <span className="font-bold d-block pt-4"> I'M SAMUEL ESPINOSA</span>
-                  <span className="text-blue-500 d-block font-bold pt-12"> MERN Stack Developer</span>
-                </h1>
-              </div>
-              <div className="flex justify-center items-end">
-                <img
-                  src={homeLogo}
-                  alt="home pic"
-                  className="max-w-md h-auto object-contain"
-                />
-              </div>
-            </div>
-          
-        </div>
-      </div>
+    <div id="home" className="flex flex-column bg-gray-900">
+      <section id="banner" className="bg-white relative overflow-hidden">
+          <Board/>
+          <div 
+            className="bg-white flex flex-col justify-center align-items-center"
+            style={{ height: `calc(100vh - ${navHeight}px)` }}
+            
+            >
+              <h1 className="heading text-4xl relative z-20 ml-10 mb-10 text-gray-900 font-bold text-center">
+                 HI, I'M SAMUEL ESPINOSA
+                <span className="text-blue-500 d-block pt-12 highlight"> MERN Stack Developer</span>
+              </h1>
+          </div>
+      </section>
       <div className="container mx-auto mx-4 mt-5 text-white">
         <Particle/>
         <div className="flex flex-wrap items-center">
@@ -97,7 +92,7 @@ function Home() {
         </div>
       </div>
     
-    </section>
+    </div>
   );
 }
 

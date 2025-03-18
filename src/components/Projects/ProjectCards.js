@@ -1,13 +1,18 @@
 import React from "react";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-function ProjectCard({ imgPath, title, description, ghLink, demoLink, isBlog }) {
+function ProjectCard({ imgPath, title, url , description, ghLink, demoLink, isBlog }) {
   return (
+    
     <div className="bg-gray-800 text-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-4">
+      <Link to={`/project/${url}`}>
       <img src={imgPath} alt="project" className="w-full h-48 object-cover rounded-lg" />
+      </Link>
       <div className="mt-4 text-center">
-        <h2 className="text-xl font-semibold">{title}</h2>
+      
+        <Link to={`/project/${url}`}><h2 className="text-xl font-semibold text-white">{title}</h2></Link>
         <p className="text-gray-300 text-sm mt-2 text-justify">{description}</p>
         <div className="mt-4 flex justify-center space-x-4">
           <a
@@ -30,7 +35,9 @@ function ProjectCard({ imgPath, title, description, ghLink, demoLink, isBlog }) 
           )}
         </div>
       </div>
+     
     </div>
+
   );
 }
 
