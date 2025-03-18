@@ -10,7 +10,7 @@ import Board from "../GameOfLife/Board";
 function Home({navHeight}) {
 
   return (
-    <div id="home" className="flex flex-column bg-gray-900">
+    <div id="home" className="bg-gray-900">
       <section id="banner" className="bg-white relative overflow-hidden">
           <Board/>
           <div 
