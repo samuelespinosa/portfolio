@@ -13,8 +13,10 @@ function Projects() {
           <span className="text-blue-500 shimmer">some</span> of my projects
         </h1>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+      <div> 
+        I'm working on my projects descriptions
+      </div>
+      {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
         {projectList.map((project, index) => (
           <ProjectCard
             key={index}
@@ -27,7 +29,7 @@ function Projects() {
             demoLink={project.demoLink}
           />
         ))}
-      </div>
+      </div>*/}
     </div>
   );
 }

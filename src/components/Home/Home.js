@@ -27,12 +27,12 @@ function Home({navHeight}) {
       <div className="container mx-auto mx-4 mt-5 text-white">
         <Particle/>
         <div className="flex flex-wrap items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1">
             <div className="flex justify-center items-center">
               <img
                 src={logoReact}
                 alt="home pic"
-                className="max-w-md h-auto object-contain"
+                className="w-52 h-auto object-contain"
               />
             </div>
             <div className="flex items-end justify-center bg-gray">
@@ -61,7 +61,7 @@ function Home({navHeight}) {
           </div>
         </div>
 
-        <div className="home-about-social text-center mt-20">
+        <div className="home-about-social text-center pt-20 pb-5">
           <h1 className="text-3xl font-bold mb-3">FIND ME ON</h1>
           <p className="text-lg mb-5">
             Feel free to <span className="text-blue-500 shimmer">connect</span> with me

@@ -53,7 +53,7 @@ function NavBar({ setNavHeight }) {
         <div className="flex flex-row justify-between w-full">
           <div className="flex w-full justify-between items-center">
             <Link to="/">
-              <img src={''} alt="brand" className="h-10" />
+              <img src="../Assets/catIcon.jpg" alt="brand" className="h-10" />
             </Link>
             <button className="md:hidden text-white focus:outline-none" onClick={toggleMenu}>
               {menuOpen ? <AiOutlineClose className="w-10 h-7" /> : <AiOutlineMenu className="w-10 h-7" />}
